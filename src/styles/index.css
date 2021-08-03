@@ -384,6 +384,7 @@ template {
 }
 
 .mainWrapper {
+  background-color: #141414;
   font-family: Ubuntu, sans-serif;
   overflow: hidden;
 }
@@ -698,14 +699,14 @@ a:hover .wrapperPuntero {
   text-align: center;
   color: whitesmoke;
   letter-spacing: 0.5rem;
-  color: red;
+  color: blue;
   font-weight: 100;
   margin: 0.8rem 4rem;
   padding: 0;
   z-index: 1;
 }
 
-#random {
+#home__subtitle--random {
   color: rgba(255, 0, 0, 0.5);
 }
 
@@ -783,7 +784,6 @@ a:hover .wrapperPuntero {
   background-color: whitesmoke;
   z-index: 2;
   transition: opacity 0.5s, width 0.25s, height 0.25s, top 0.5s, right 0.5s, border-radius 0.5s;
-  mix-blend-mode: exclusion;
   opacity: 100%;
   display: none;
 }
@@ -798,7 +798,6 @@ a:hover .wrapperPuntero {
   border-radius: 0;
   top: 0;
   right: 0;
-  mix-blend-mode: normal;
   color: #141414;
 }
 

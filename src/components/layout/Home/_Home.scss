@@ -52,13 +52,14 @@
   text-align: center;
   color: $theme-color1;
   letter-spacing: 0.5rem;
-  color: red;
+  // color: red;
+  color: blue;
   font-weight: 100;
   margin: 0.8rem 4rem;
   padding: 0;
   z-index: 1;
 }
-#random {
+#home__subtitle--random {
   color: rgba(255, 0, 0, 0.5);
 }
 @media (max-width: 800px) {

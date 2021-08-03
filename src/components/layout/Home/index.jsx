@@ -41,7 +41,7 @@ function Home() {
               char = this.randomChar();
               this.queue[i].char = char;
             }
-            output += `<span id="random">${char}</span>`;
+            output += `<span id="home__subtitle--random">${char}</span>`;
           } else {
             output += from;
           }

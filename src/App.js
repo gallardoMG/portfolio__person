@@ -7,21 +7,21 @@ function App() {
   const [showContact, setShowContact] = useState(false);
   const [position, setPosition] = useState([0, 0]);
   const mainWrapper = useRef(null);
-  const elements = document.querySelectorAll('a, li, .skills__section, skills__section-others, .logo, .home__title, .arrowDesktop, .arrowContact');
-  useEffect(() => {
-    elements.forEach((el) => {
-      el.addEventListener('mouseover', () => {
-        document.querySelector('.puntero').classList.add('puntero--grow');
-        el.addEventListener('mouseout', () => document.querySelector('.puntero').classList.remove('puntero--grow'))
-      })
-    })
-    return () => elements.forEach((el) => {
-      el.removeEventListener('mouseover', () => {
-        document.querySelector('.puntero').classList.add('hh');
-        el.removeEventListener('mouseout', () => document.querySelector('.puntero').classList.remove('puntero--grow'))
-      })
-    })
-  }, [elements]);
+  const elements = document.querySelectorAll('a, li, .skills__section, .skills__section-others, .logo, .home__title, .arrowDesktop, .arrowContact');
+  // useEffect(() => {
+  //   elements.forEach((el) => {
+  //     el.addEventListener('mouseover', () => {
+  //       document.querySelector('.puntero').classList.add('puntero--grow');
+  //       el.addEventListener('mouseout', () => document.querySelector('.puntero').classList.remove('puntero--grow'))
+  //     })
+  //   })
+  //   return () => elements.forEach((el) => {
+  //     el.removeEventListener('mouseover', () => {
+  //       document.querySelector('.puntero').classList.add('hh');
+  //       el.removeEventListener('mouseout', () => document.querySelector('.puntero').classList.remove('puntero--grow'))
+  //     })
+  //   })
+  // }, [elements]);
   const currentPosition = (e) => {
     setPosition([e.clientX, e.clientY])
   }
