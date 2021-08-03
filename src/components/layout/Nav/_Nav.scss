@@ -1,0 +1,47 @@
+@import '../../../styles/variables';
+.nav {
+  width: 5rem;
+  min-height: 100vh;
+  max-height: 100vh;
+  position: fixed;
+  font-weight: 100;
+  left: calc(100% - 5rem);
+  z-index: 1;
+  opacity: 100%;
+  transition: opacity 0.5s;
+}
+.nav--hidde {
+  opacity: 0;
+}
+
+.nav__list-wrapper {
+  height: 100vh;
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+  font-size: 1rem;
+  color: $theme-color1;
+  list-style: none;
+}
+
+.nav__arrow {
+  position: relative;
+  display: grid;
+  justify-items: center;
+  width: 5rem;
+}
+.nav__bar {
+  position: absolute;
+  height: 100vh;
+  top: 0;
+}
+.nav__progress {
+  width: 0.5px;
+  background-color: whitesmoke;
+}
+@media (max-width: 800px) {
+  .nav {
+    display: none;
+  }
+}

@@ -1,0 +1,33 @@
+@import '../../../styles/variables';
+
+.education {
+  min-height: 100vh;
+  width: calc(100% - 5rem);
+  color: $theme-color1;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 4rem;
+  font-size: 4vw;
+}
+
+.education__section {
+  font-weight: 100;
+  width: 100%;
+  height: 8rem;
+  display: grid;
+  place-content: center;
+  overflow: hidden;
+  white-space: pre;
+  text-decoration: none;
+  position: relative;
+  color: $theme-color1;
+  font-family: binaria_display, Ubuntu, sans-serif;
+  transform: matrix(1, 0, 0, 1.5, 1, 0);
+}
+
+@media (max-width: 800px) {
+  .education {
+    width: 100%;
+    font-size: 6.5vw;
+  }
+}

@@ -1,0 +1,63 @@
+@import './_normalize';
+@import './variables';
+@font-face {
+  font-family: binaria_display;
+  src: url('../fonts/binaria_display.woff');
+}
+::-webkit-scrollbar {
+  display: none;
+}
+.fab {
+  font-size: 3rem;
+  padding: 0.5rem;
+  color: $theme-color1;
+}
+.icon-svg {
+  width: 3rem;
+  padding: 0.5rem 0;
+}
+.portfolio__title,
+.skills__title,
+.contact__title,
+.education__title {
+  color: $theme-color1;
+  font-size: 3vw;
+  font-weight: 200;
+  text-align: center;
+  letter-spacing: 0.3rem;
+  word-spacing: 0.5rem;
+}
+.contact__title {
+  color: $theme-color2;
+}
+.mainWrapper {
+  font-family: Ubuntu, sans-serif;
+  overflow: hidden;
+}
+
+@media (max-width: 800px) {
+  .fab {
+    font-size: 2.7rem;
+  }
+  .portfolio__title,
+  .skills__title,
+  .contact__title,
+  .education__title {
+    font-size: 6vw;
+  }
+}
+
+@import '../components/layout/Loading/Loading';
+@import '../components/layout/BackgroundApp/Background';
+@import '../components/layout/Pointer/Pointer';
+@import '../components/common/ButtonsCircle/ButtonsCircle';
+@import '../components/layout/Home/Home';
+@import '../components//layout/Nav/Nav';
+@import '../components/layout/MenuMovil/MenuMovil';
+@import '../components/common/NavList/NavList';
+@import '../components/layout/Portfolio/Portfolio';
+@import '../components/layout/Education/Education';
+@import '../components/layout/Skills/Skills';
+@import '../components/common/PorcentSkill/PorcentSkill';
+@import '../components/layout/Contact/Contact';
+@import '../components/layout/Footer/Footer';

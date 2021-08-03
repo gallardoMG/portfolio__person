@@ -1,0 +1,60 @@
+@import '../../../styles/variables';
+.portfolio {
+  min-height: 100vh;
+  width: calc(100% - 5rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 5rem;
+  font-size: 5.1vw;
+  font-weight: bold;
+  letter-spacing: 0.8rem;
+  word-spacing: 1rem;
+  margin-bottom: 4rem;
+}
+.portfolio__link {
+  text-decoration: none;
+  display: grid;
+  place-items: center;
+  color: $theme-color1;
+  height: 6.5rem;
+  width: 50rem;
+  transform: matrix(1, 0, 0, 1.2, 1, 0);
+  overflow: hidden;
+}
+.portfolio__img {
+  width: 15rem;
+  position: absolute;
+  opacity: 0.7;
+  transition: width 0.3s, opacity 0.3s;
+  animation: ondulado 1s infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+  border: 2px solid $theme-color1;
+}
+@keyframes ondulado {
+  0% {
+    border-top-left-radius: 7.5rem;
+    border-top-right-radius: 15rem;
+    border-bottom-left-radius: 15rem;
+    border-bottom-right-radius: 7.5rem;
+  }
+
+  100% {
+    border-top-left-radius: 15rem;
+    border-top-right-radius: 7.5rem;
+    border-bottom-left-radius: 7.5rem;
+    border-bottom-right-radius: 15rem;
+  }
+}
+
+.portfolio__img--hidden {
+  width: 0;
+  opacity: 0;
+}
+
+@media (max-width: 800px) {
+  .portfolio {
+    width: 100%;
+  }
+}

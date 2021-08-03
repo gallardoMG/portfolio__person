@@ -1,0 +1,43 @@
+@import '../../../styles/variables';
+
+.navPhone {
+  position: relative;
+  font-family: binaria_display, Ubuntu, sans-serif;
+  font-weight: 100;
+  font-size: 2.2rem;
+  letter-spacing: 0.5rem;
+  list-style-type: none;
+}
+.navDesktop {
+  margin: 1rem 0;
+  display: grid;
+  width: 5rem;
+  height: 2rem;
+  place-items: center;
+  cursor: pointer;
+}
+.navDesktop:hover {
+  font-size: 1.09rem;
+}
+.navDesktop--active {
+  display: grid;
+  align-items: center;
+  justify-self: end;
+  justify-items: center;
+  width: 0;
+  height: 2rem;
+  font-size: 0.95rem;
+  color: $theme-color2;
+  background-color: $theme-color1;
+  animation-name: navDesktop--active;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+@keyframes navDesktop--active {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 5rem;
+  }
+}

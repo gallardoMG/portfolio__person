@@ -1,0 +1,119 @@
+@import '../../../styles/variables';
+.skills {
+  min-height: 100vh;
+  width: calc(100% - 5rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 100%;
+  padding-bottom: 3rem;
+}
+.skills__section,
+.skills__section-others {
+  display: grid;
+  width: 85vw;
+  margin: 1.5rem 0.5rem 1.5rem 0.5rem;
+  padding: 1rem 0 3rem 0;
+  border: 0.5px solid $theme-color1;
+  position: relative;
+  color: $theme-color1;
+  grid-template-columns: repeat(5, 1fr);
+  justify-items: center;
+}
+.skills__section-others {
+  padding: 1rem 0 1rem 0;
+  place-items: center;
+  grid-template-columns: repeat(4, 1fr);
+}
+.skills__backgroundSlide {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  position: absolute;
+  justify-self: flex-start;
+  background-color: $theme-color1;
+  transition: width 1s cubic-bezier(0.17, 0.32, 0.09, 0.81);
+}
+.skills__background--effect {
+  width: 0%;
+}
+.skills__subtitle {
+  color: $theme-color1;
+  font-weight: 100;
+  letter-spacing: 0.5rem;
+  font-size: 2vw;
+}
+.skills__plus {
+  overflow: hidden;
+  width: 11rem;
+  padding: 0.8rem 0;
+  margin-bottom: 2rem;
+  position: relative;
+  top: 1rem;
+  color: $theme-color1;
+  font-weight: 100;
+  letter-spacing: 0.5rem;
+  font-size: 2vw;
+  display: grid;
+}
+.skills__svg {
+  width: 2.7rem;
+  padding: 0.5rem 0;
+}
+.skills__wrapperIcons {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  align-items: center;
+  left: 7rem;
+  top: -0.3rem;
+}
+.skills__wrapperIcons--effect {
+  animation: skills__others-elements--effect 3.5s
+    cubic-bezier(0.15, 0.11, 0.17, 0.88) infinite;
+}
+@keyframes skills__others-elements--effect {
+  16% {
+    top: -0.3rem;
+  }
+  32% {
+    top: -7.7rem;
+  }
+  48% {
+    top: -7.7rem;
+  }
+  64% {
+    top: -3.9rem;
+  }
+  80% {
+    top: -3.9rem;
+  }
+  100% {
+    top: -0.3rem;
+  }
+}
+@media (max-width: 800px) {
+  .skills {
+    width: 100%;
+  }
+  .skills__subtitle {
+    font-size: 1.1rem;
+    grid-column: 1/3;
+    align-self: center;
+  }
+  .skills__section {
+    padding: 1rem 0 1.5rem 0;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 5rem);
+  }
+  .skills__section-others {
+    place-content: center;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 0.5rem 0 1rem 0;
+  }
+  .skills__plus {
+    font-size: 1.1rem;
+    grid-column: 1/5;
+    padding: 1rem 0;
+  }
+}

@@ -1,0 +1,37 @@
+@import '../../../styles/variables';
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 11rem;
+  width: 2rem;
+  font-weight: 100;
+  font-size: 0.8rem;
+  pointer-events: none;
+  opacity: 100%;
+  transition: opacity 0.5s;
+}
+.footer--hidde {
+  opacity: 0;
+}
+.footer__text {
+  color: rgb(182, 180, 180);
+  writing-mode: vertical-lr;
+  letter-spacing: 0.2rem;
+}
+@media (max-width: 800px) {
+  .footer {
+    position: static;
+    display: grid;
+    width: 100%;
+    height: 2rem;
+    margin-top: -2.5rem;
+    padding-bottom: 3rem;
+  }
+  .footer__text {
+    text-align: center;
+    writing-mode: initial;
+    color: rgb(129, 129, 129);
+  }
+}

@@ -1,0 +1,76 @@
+@import '../../../styles/variables';
+.contact {
+  background: $theme-color1;
+  height: 0vh;
+  width: 0%;
+  top: 50vh;
+  z-index: 2;
+  position: fixed;
+  overflow: hidden;
+  display: grid;
+  place-content: center;
+  transition: width 0.3s, top 0.3s, height 0.3s;
+}
+.contact--open {
+  height: 1vh;
+  width: 100%;
+}
+.contact--expand {
+  height: 100vh;
+  top: 0;
+  transition: top 0.3s, height 0.3s;
+}
+.contact__quit {
+  position: absolute;
+  transform: rotate(-0.25turn);
+  top: 4.5rem;
+  right: 1rem;
+}
+
+.contact__linkWrapper {
+  display: grid;
+  justify-items: center;
+  width: 100vw;
+  height: 17rem;
+  position: relative;
+  overflow: hidden;
+}
+.contact__link {
+  display: flex;
+  width: 90vw;
+  flex-direction: column;
+  place-items: center;
+  position: absolute;
+  top: 15.65rem;
+  transition: top 0.2s;
+  text-align: center;
+}
+.contact__link--show {
+  transition: top 0.8s;
+  top: 0;
+}
+.contact__text {
+  font-weight: 100;
+  font-size: 1rem;
+  white-space: pre-line;
+  letter-spacing: 3px;
+  word-spacing: 3px;
+}
+.contact__icons {
+  display: flex;
+  text-decoration: none;
+  color: $theme-color2;
+}
+.contact__iconLink {
+  color: $theme-color2;
+}
+.contact__email {
+  font-weight: 100;
+  font-size: 6vw;
+  color: $theme-color2;
+}
+@media (max-width: 800px) {
+  .contact__email {
+    font-size: 9vw;
+  }
+}
