@@ -1,4 +1,18 @@
 @import '../../../styles/variables';
+// .nav {
+//   width: 5rem;
+//   min-height: 100vh;
+//   max-height: 100vh;
+//   position: fixed;
+//   font-weight: 100;
+//   left: calc(100% - 5rem);
+//   z-index: 1;
+//   opacity: 100%;
+//   transition: opacity 0.5s;
+// }
+// .nav--hidde {
+//   opacity: 0;
+// }
 .nav {
   width: 5rem;
   min-height: 100vh;
@@ -7,11 +21,6 @@
   font-weight: 100;
   left: calc(100% - 5rem);
   z-index: 1;
-  opacity: 100%;
-  transition: opacity 0.5s;
-}
-.nav--hidde {
-  opacity: 0;
 }
 
 .nav__list-wrapper {

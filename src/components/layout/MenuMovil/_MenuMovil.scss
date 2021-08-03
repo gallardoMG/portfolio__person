@@ -1,5 +1,20 @@
 @import '../../../styles/variables';
 
+// .menuMovil {
+//   position: fixed;
+//   width: 7.8rem;
+//   height: 7.8rem;
+//   top: -4rem;
+//   right: -4rem;
+//   border-radius: 50%;
+//   background-color: $theme-color1;
+//   z-index: 2;
+//   transition: opacity 0.5s, width 0.25s, height 0.25s, top 0.5s, right 0.5s,
+//     border-radius 0.5s;
+//   mix-blend-mode: exclusion;
+//   opacity: 100%;
+//   display: none;
+// }
 .menuMovil {
   position: fixed;
   width: 7.8rem;
@@ -9,10 +24,9 @@
   border-radius: 50%;
   background-color: $theme-color1;
   z-index: 2;
-  transition: opacity 0.5s, width 0.25s, height 0.25s, top 0.5s, right 0.5s,
+  transition: width 0.25s, height 0.25s, top 0.5s, right 0.5s,
     border-radius 0.5s;
   mix-blend-mode: exclusion;
-  opacity: 100%;
   display: none;
 }
 .menuMovil--hidde {
