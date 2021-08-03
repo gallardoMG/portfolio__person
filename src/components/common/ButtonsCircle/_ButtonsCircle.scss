@@ -1,41 +1,24 @@
 @import '../../../styles/variables';
 
 .arrowDesktop__svg3,
-.arrowPhone__svg3,
 .arrowContact:hover .arrowContact__svg1,
 .arrowContact:hover .arrowContact__svg3,
-.arrowContact,
-.arrowMenu:hover .arrowMenu__svg1,
-.arrowMenu:hover .arrowMenu__svg3,
-.arrowMenu {
+.arrowContact {
   fill: $theme-color2;
 }
 .arrowDesktop:hover .arrowDesktop__svg2,
 .arrowDesktop__svg1,
-.arrowPhone:hover .arrowPhone__svg2,
-.arrowPhone__svg1,
 .arrowContact:hover .arrowContact__svg2,
-.arrowContact__svg1,
-.arrowMenu:hover .arrowMenu__svg2,
-.arrowMenu__svg1 {
+.arrowContact__svg1 {
   fill: transparent;
 }
 .arrowDesktop:hover .arrowDesktop__svg1,
 .arrowDesktop:hover .arrowDesktop__svg3,
 .arrowDesktop,
-.arrowPhone:hover .arrowPhone__svg1,
-.arrowPhone:hover .arrowPhone__svg3,
-.arrowPhone,
-.arrowContact__svg3,
-.arrowMenu__svg3 {
+.arrowContact__svg3 {
   fill: $theme-color1;
 }
-.arrowPhone:hover,
-.arrowMenu:hover {
-  width: 3.2rem;
-}
-.arrowDesktop--hidde,
-.arrowPhone--hidde {
+.arrowDesktop--hidde {
   transform: scale(0);
 }
 .arrowDesktop:hover,
@@ -50,21 +33,32 @@
   transition: transform 0.3s, width 0.3s, fill 0.3s;
   cursor: pointer;
 }
-.arrowMenu,
-.arrowPhone {
-  transition: transform 0.3s, width 0.3s, fill 0.3s;
-  width: 3rem;
-  cursor: pointer;
-}
-.arrowPhone {
-  display: none;
-  position: fixed;
-  bottom: 0.8rem;
-  right: 0.8rem;
-  mix-blend-mode: exclusion;
-}
 @media (max-width: 800px) {
+  .arrowPhone__svg3,
+  .arrowMenu {
+    fill: $theme-color2;
+  }
+  .arrowPhone__svg1,
+  .arrowMenu__svg1 {
+    fill: transparent;
+  }
+  .arrowPhone,
+  .arrowMenu__svg3 {
+    fill: $theme-color1;
+  }
+
+  .arrowMenu,
   .arrowPhone {
-    display: initial;
+    transition: transform 0.3s, width 0.3s, fill 0.3s;
+    width: 3rem;
+    cursor: pointer;
+  }
+  .arrowPhone {
+    position: fixed;
+    bottom: 0.8rem;
+    right: 0.8rem;
+  }
+  .arrowPhone--hidde {
+    transform: scale(0);
   }
 }

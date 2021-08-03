@@ -1,38 +1,13 @@
 @import '../../../styles/variables';
 
 .footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  height: 11rem;
-  width: 2rem;
+  display: grid;
+  place-content: center;
   font-weight: 100;
-  font-size: 0.8rem;
-  pointer-events: none;
-  opacity: 100%;
-  transition: opacity 0.5s;
-  z-index: 3;
-  mix-blend-mode: exclusion;
-}
-.footer--hidde {
-  opacity: 0;
+  letter-spacing: 0.3rem;
 }
 .footer__text {
+  font-size: 0.95rem;
   color: rgb(182, 180, 180);
-  writing-mode: vertical-lr;
-  letter-spacing: 0.2rem;
-}
-@media (max-width: 800px) {
-  .footer {
-    position: static;
-    display: grid;
-    width: 100%;
-    height: 2rem;
-    place-content: center;
-  }
-  .footer__text {
-    text-align: center;
-    writing-mode: initial;
-    color: rgb(129, 129, 129);
-  }
+  z-index: 1;
 }
