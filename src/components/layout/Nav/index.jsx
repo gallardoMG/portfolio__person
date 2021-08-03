@@ -6,6 +6,7 @@ import { sizeContainer } from '../../../utils/selectors';
 const Nav = ({ setShowContact, mainWrapper }) => {
   const [progressBar, setProgressBar] = useState(0);
   const bar = useCallback(() => {
+    console.log('bar event active');
     const porcent =
       (100 / (sizeContainer(mainWrapper).height - window.innerHeight)) *
       window.pageYOffset;

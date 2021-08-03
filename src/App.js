@@ -38,15 +38,15 @@ function App() {
   }
     , [sizeWindow])
   return (
-    <div className='mainWrapper' onMouseMove={e => sizeWindow ? currentPosition(e) : e.prevent} ref={mainWrapper}>
+    <div className='mainWrapper mainWrapper--noscroll' onMouseMove={e => sizeWindow ? currentPosition(e) : e.prevent} ref={mainWrapper}>
       <Loading />
       <Pointer position={position} />
       <BackgroundApp />
-      <Nav setShowContact={setShowContact} mainWrapper={mainWrapper} />
-      <MenuMovil setShowContact={setShowContact} />
+      {sizeWindow && <Nav setShowContact={setShowContact} mainWrapper={mainWrapper} />}
+      {!sizeWindow && <MenuMovil setShowContact={setShowContact} />}
       <Contact showContact={showContact} setShowContact={setShowContact} />
       <Home />
-      <Portfolio />
+      <Portfolio sizeWindow={sizeWindow} />
       <Education />
       <Skills />
       <Footer />

@@ -26,13 +26,19 @@
   text-align: center;
   letter-spacing: 0.3rem;
   word-spacing: 0.5rem;
+  z-index: 1;
 }
 .contact__title {
-  color: $theme-color2;
+  color: $theme-color1;
 }
 .mainWrapper {
   background-color: $theme-color2;
   font-family: Ubuntu, sans-serif;
+  overflow: hidden;
+  background-color: whitesmoke;
+}
+.mainWrapper--noscroll {
+  height: 100vh;
   overflow: hidden;
 }
 

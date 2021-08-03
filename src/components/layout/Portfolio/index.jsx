@@ -10,7 +10,7 @@ import {
   randomQuote,
 } from '../../../images/index';
 
-const Portfolio = () => {
+const Portfolio = ({ sizeWindow }) => {
   const [tiltText, setTiltText] = useState(0);
   const [client, setClient] = useState([0, 0]);
   const [img, setImg] = useState(null);
@@ -35,7 +35,15 @@ const Portfolio = () => {
       beforeScroll.current = lastScroll;
       idTimeoutScroll.current = setTimeout(() => setTiltText(0), 100);
     }
+  }, [tiltText]);
+  const moveImg = useCallback(e => {
+    setClient([
+      e.clientX - sizeContainer(containerLinks).left - 400,
+      e.clientY - sizeContainer(containerLinks).top - 30,
+    ]);
+    removeClass(portfolio__linkImg, 'portfolio__img--hidden');
   }, []);
+
   useEffect(() => {
     window.addEventListener('scroll', portfolioEffect);
   }, [portfolioEffect]);
@@ -51,16 +59,12 @@ const Portfolio = () => {
       />
       <a.div
         ref={containerLinks}
-        onMouseMove={e => {
-          setClient([
-            e.clientX - sizeContainer(containerLinks).left - 400,
-            e.clientY - sizeContainer(containerLinks).top - 30,
-          ]);
-          removeClass(portfolio__linkImg, 'portfolio__img--hidden');
-        }}
-        onMouseOut={() => {
-          addClass(portfolio__linkImg, 'portfolio__img--hidden');
-        }}
+        onMouseMove={e => (sizeWindow ? moveImg(e) : e.preventDefault)}
+        onMouseOut={e =>
+          sizeWindow
+            ? addClass(portfolio__linkImg, 'portfolio__img--hidden')
+            : e.preventDefault
+        }
         style={ConfigSpring(`matrix(1, ${tiltText}, 0, 1, 0, 0)`)}
       >
         <a

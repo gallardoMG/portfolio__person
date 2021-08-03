@@ -13,8 +13,13 @@ const ButtonsCircle = ({ type, event }) => {
   const svg = useRef(null);
   const showArrow = useCallback(() => {
     if (window.pageYOffset < 300) {
-      addClass(svg, 'arrowDesktop--hidde');
-      addClass(svg, 'arrowPhone--hidde');
+      if (
+        svg.current.classList.contains('arrowDesktop') ||
+        svg.current.classList.contains('arrowPhone')
+      ) {
+        addClass(svg, 'arrowDesktop--hidde');
+        addClass(svg, 'arrowPhone--hidde');
+      }
     } else {
       removeClass(svg, 'arrowDesktop--hidde');
       removeClass(svg, 'arrowPhone--hidde');
