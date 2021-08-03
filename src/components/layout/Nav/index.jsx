@@ -17,7 +17,8 @@ const Nav = ({ setShowContact, mainWrapper }) => {
   }, [bar]);
 
   return (
-    <nav className='nav nav--hidde'>
+    <nav className='nav'>
+      {/* <nav className='nav nav--hidde'> */}
       <ul className='nav__list-wrapper'>
         <li className='nav__arrow'>
           <ButtonsCircle type={'ARROW_DESKTOP'} />

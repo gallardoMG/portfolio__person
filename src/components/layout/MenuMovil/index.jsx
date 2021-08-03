@@ -15,7 +15,8 @@ const MenuMovil = ({ setShowContact }) => {
     setClose(!close);
   };
   return (
-    <section className='menuMovil menuMovil--hidde' ref={menuMovil}>
+    <section className='menuMovil' ref={menuMovil}>
+      {/* <section className='menuMovil menuMovil--hidde' ref={menuMovil}>*/}
       <div
         className='menuMovil__icon'
         ref={menuMovil__icon}
