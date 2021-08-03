@@ -18,11 +18,11 @@ const Loading = () => {
       setTimeout(() => {
         document.getElementsByTagName('body')[0].classList.remove('noscroll');
         window.removeEventListener('scroll', top);
-        document.querySelector('.nav').classList.remove('nav--hidde');
-        document.querySelector('.footer').classList.remove('footer--hidde');
-        document
-          .querySelector('.menuMovil')
-          .classList.remove('menuMovil--hidde');
+        // document.querySelector('.nav').classList.remove('nav--hidde');
+        // document.querySelector('.footer').classList.remove('footer--hidde');
+        // document
+        //   .querySelector('.menuMovil')
+        //   .classList.remove('menuMovil--hidde');
         document
           .querySelector('.backgroundApp__bgLines')
           .classList.add('backgroundApp__bgLines--effect');
