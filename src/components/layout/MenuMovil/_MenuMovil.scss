@@ -12,7 +12,6 @@
     z-index: 2;
     transition: opacity 0.5s, width 0.25s, height 0.25s, top 0.5s, right 0.5s,
       border-radius 0.5s;
-    mix-blend-mode: exclusion;
   }
   .menuMovil--hidde {
     opacity: 0;
@@ -23,13 +22,11 @@
     border-radius: 0;
     top: 0;
     right: 0;
-    mix-blend-mode: normal;
     color: $theme-color2;
   }
   .menuMovil__icon {
     align-self: flex-end;
     font-family: 'Source Code Pro', monospace;
-    font-weight: bold;
     font-size: 1.1rem;
     letter-spacing: 0.1rem;
     margin: 5rem 0 0 0.7rem;

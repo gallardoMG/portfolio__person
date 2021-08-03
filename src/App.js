@@ -30,13 +30,8 @@ function App() {
     window.addEventListener('resize', () => {
       if (window.innerWidth > 800) setSizeWindow(true)
       else setSizeWindow(false)
-    })
-    return () => window.removeEventListener('resize', () => {
-      if (window.innerWidth > 800) setSizeWindow(true)
-      else setSizeWindow(false)
-    })
-  }
-    , [sizeWindow])
+    });
+  }, [sizeWindow])
   return (
     <div className='mainWrapper mainWrapper--noscroll' onMouseMove={e => sizeWindow ? currentPosition(e) : e.prevent} ref={mainWrapper}>
       <Loading />

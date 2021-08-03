@@ -1,7 +1,7 @@
 @import '../../../styles/variables';
 
 .home {
-  height: 95vh;
+  height: 98vh;
   width: calc(100% - 5rem);
   color: $theme-color1;
   display: flex;
@@ -18,7 +18,7 @@
 }
 .homeBackground--expand {
   background-color: $theme-color2;
-  height: 100%;
+  height: 100vh;
 }
 .home--hidde {
   visibility: hidden;

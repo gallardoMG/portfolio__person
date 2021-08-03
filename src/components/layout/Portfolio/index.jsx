@@ -28,21 +28,24 @@ const Portfolio = ({ sizeWindow }) => {
         sizeContainer(containerLinks).height + window.innerHeight
     ) {
       if (lastScroll > beforeScroll.current) {
-        setTiltText(-0.08);
+        setTiltText(-0.1);
       } else if (lastScroll < beforeScroll.current) {
-        setTiltText(0.08);
+        setTiltText(0.1);
       }
       beforeScroll.current = lastScroll;
       idTimeoutScroll.current = setTimeout(() => setTiltText(0), 100);
     }
   }, [tiltText]);
-  const moveImg = useCallback(e => {
-    setClient([
-      e.clientX - sizeContainer(containerLinks).left - 400,
-      e.clientY - sizeContainer(containerLinks).top - 30,
-    ]);
-    removeClass(portfolio__linkImg, 'portfolio__img--hidden');
-  }, []);
+  const moveImg = useCallback(
+    e => {
+      setClient([
+        e.clientX - sizeContainer(containerLinks).left - 400,
+        e.clientY - sizeContainer(containerLinks).top - 30,
+      ]);
+      removeClass(portfolio__linkImg, 'portfolio__img--hidden');
+    },
+    [client]
+  );
 
   useEffect(() => {
     window.addEventListener('scroll', portfolioEffect);
