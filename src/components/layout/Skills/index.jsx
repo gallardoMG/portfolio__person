@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
-import { addClass, removeClass } from '../../../utils/selectors';
+import { addClass, removeClass, sizeContainer } from '../../../utils/selectors';
 import { PorcentSkill } from '../../common/index';
 import { redux, jquery, illustrator, photoshop } from '../../../images/index';
 
@@ -17,10 +17,7 @@ const Skills = () => {
   const skills__backgroundSlide3 = useRef(null);
   const skills__wrapperIcons = useRef(null);
   const showSection = useCallback(() => {
-    const section_1 = sizeSection_1.current.getBoundingClientRect().top;
-    const section_2 = sizeSection_2.current.getBoundingClientRect().top;
-    const section_3 = sizeSection_3.current.getBoundingClientRect().top;
-    if (section_1 <= window.innerHeight) {
+    if (sizeContainer(sizeSection_1).top <= window.innerHeight) {
       addClass(skills__backgroundSlide1, 'skills__background--effect');
       setStartPorcent_1(true);
     } else {
@@ -28,7 +25,7 @@ const Skills = () => {
       setStartPorcent_1(false);
       setPorcent_1(0);
     }
-    if (section_2 <= window.innerHeight) {
+    if (sizeContainer(sizeSection_2).top <= window.innerHeight) {
       addClass(skills__backgroundSlide2, 'skills__background--effect');
       setStartPorcent_2(true);
     } else {
@@ -36,7 +33,7 @@ const Skills = () => {
       setStartPorcent_2(false);
       setPorcent_2(0);
     }
-    if (section_3 <= window.innerHeight) {
+    if (sizeContainer(sizeSection_3).top <= window.innerHeight) {
       addClass(skills__backgroundSlide3, 'skills__background--effect');
       addClass(skills__wrapperIcons, 'skills__wrapperIcons--effect');
     } else {
@@ -58,7 +55,6 @@ const Skills = () => {
     <section id='skills' className='skills'>
       <h2 className='skills__title'>Skills and knowledge</h2>
       <div className='skills__section' ref={sizeSection_1}>
-        {/* <div className='skills__content'> */}
         <PorcentSkill
           porcent={porcent_1 * 0.88}
           child={<i className='fab fa-js' />}
@@ -76,14 +72,12 @@ const Skills = () => {
           porcent={porcent_1 * 0.46}
           child={<i className='fab fa-python' />}
         />
-        {/* </div> */}
         <div
           className='skills__backgroundSlide'
           ref={skills__backgroundSlide1}
         />
       </div>
       <section className='skills__section' ref={sizeSection_2}>
-        {/* <div className='skills__content'> */}
         <PorcentSkill
           porcent={porcent_2 * 0.82}
           child={<i className='fab fa-react' />}
@@ -101,7 +95,6 @@ const Skills = () => {
           porcent={porcent_2 * 0.6}
           child={<img src={jquery} alt='jQuery' className='skills__svg' />}
         />
-        {/* </div> */}
         <div
           className='skills__backgroundSlide'
           ref={skills__backgroundSlide2}

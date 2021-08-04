@@ -6,7 +6,6 @@ import { sizeContainer } from '../../../utils/selectors';
 const Nav = ({ setShowContact, mainWrapper }) => {
   const [progressBar, setProgressBar] = useState(0);
   const bar = useCallback(() => {
-    console.log('bar event active');
     const porcent =
       (100 / (sizeContainer(mainWrapper).height - window.innerHeight)) *
       window.pageYOffset;
@@ -19,7 +18,6 @@ const Nav = ({ setShowContact, mainWrapper }) => {
 
   return (
     <nav className='nav'>
-      {/* <nav className='nav nav--hidde'> */}
       <ul className='nav__list-wrapper'>
         <li className='nav__arrow'>
           <ButtonsCircle type={'ARROW_DESKTOP'} />

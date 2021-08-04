@@ -1,17 +1,18 @@
 import React from 'react';
 import { Link as LinkS } from 'react-scroll';
+import { NAV_PHONE, NAV_DESKTOP } from '../../../constants/variables';
 
 const NavList = ({ type, setShowContact, eventLink }) => {
   let className;
   let click;
   let classActive;
   switch (type) {
-    case 'NAV_PHONE':
+    case NAV_PHONE:
       className = 'navPhone';
       classActive = '';
       click = eventLink;
       break;
-    case 'NAV_DESKTOP':
+    case NAV_DESKTOP:
       className = 'navDesktop';
       classActive = 'navDesktop--active';
       click = e => e.preventDefault();

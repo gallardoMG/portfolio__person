@@ -12,14 +12,14 @@ const Loading = ({
       setTimeout(() => {
         addClass(homeBackground, 'homeBackground--expand');
         removeClass(backgroundApp__bgLines, 'backgroundApp__bgLines--hidde');
-      }, 1000);
+      }, 950);
       setTimeout(() => {
         removeClass(mainWrapper, 'mainWrapper--noscroll');
         addClass(backgroundApp__bgLines, 'backgroundApp__bgLines--effect');
       }, 2000);
     });
-  }, []);
-  return <div className='loading' />;
+  }, [home, homeBackground, backgroundApp__bgLines, mainWrapper]);
+  return <></>;
 };
 
 export default Loading;

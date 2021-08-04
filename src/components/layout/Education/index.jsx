@@ -17,22 +17,11 @@ const Education = () => {
           sizeContainer(education).top *
           (sizeContainer(education).right / (window.innerWidth / 5))
       );
-    } else if (sizeContainer(education).bottom < 0) {
-      setAxisX(
-        (100 / sizeContainer(education).height) *
-          -window.innerHeight *
-          (sizeContainer(education).right / (window.innerWidth / 5))
-      );
-    } else if (sizeContainer(education).top > window.innerHeight) {
-      setAxisX(
-        (100 / sizeContainer(education).height) *
-          window.innerHeight *
-          (sizeContainer(education).right / (window.innerWidth / 5))
-      );
     }
   }, []);
   useEffect(() => {
     window.addEventListener('scroll', slideText);
+    return () => window.removeEventListener('scroll', slideText);
   }, [slideText]);
   return (
     <section id='education' className='education' ref={education}>

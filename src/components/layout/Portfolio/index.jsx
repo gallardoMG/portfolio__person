@@ -23,9 +23,8 @@ const Portfolio = ({ sizeWindow }) => {
     clearTimeout(idTimeoutScroll.current);
     const lastScroll = window.pageYOffset;
     if (
-      sizeContainer(containerLinks).top >= -window.innerHeight &&
-      sizeContainer(containerLinks).bottom <=
-        sizeContainer(containerLinks).height + window.innerHeight
+      sizeContainer(containerLinks).top <= window.innerHeight &&
+      sizeContainer(containerLinks).bottom >= 0
     ) {
       if (lastScroll > beforeScroll.current) {
         setTiltText(-0.1);
@@ -35,17 +34,14 @@ const Portfolio = ({ sizeWindow }) => {
       beforeScroll.current = lastScroll;
       idTimeoutScroll.current = setTimeout(() => setTiltText(0), 100);
     }
-  }, [tiltText]);
-  const moveImg = useCallback(
-    e => {
-      setClient([
-        e.clientX - sizeContainer(containerLinks).left - 400,
-        e.clientY - sizeContainer(containerLinks).top - 30,
-      ]);
-      removeClass(portfolio__linkImg, 'portfolio__img--hidden');
-    },
-    [client]
-  );
+  }, []);
+  const moveImg = useCallback(e => {
+    setClient([
+      e.clientX - sizeContainer(containerLinks).left - 400,
+      e.clientY - sizeContainer(containerLinks).top - 30,
+    ]);
+    removeClass(portfolio__linkImg, 'portfolio__img--hidden');
+  }, []);
 
   useEffect(() => {
     window.addEventListener('scroll', portfolioEffect);

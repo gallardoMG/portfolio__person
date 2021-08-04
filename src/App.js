@@ -11,6 +11,7 @@ function App() {
   const homeBackground = useRef(null);
   const backgroundApp__bgLines = useRef(null);
   const currentPosition = (e) => {
+    console.log(`pointer`)
     setPosition([e.clientX, e.clientY])
   }
   const [sizeWindow, setSizeWindow] = useState(window.innerWidth > 800)
