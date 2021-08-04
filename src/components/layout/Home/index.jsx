@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-function Home({ home, homeBackground }) {
+function Home({ home, homeBackground, home__title }) {
   const home__subtitle = useRef(null);
   useEffect(() => {
     class TextScramble {
@@ -71,7 +71,9 @@ function Home({ home, homeBackground }) {
   return (
     <main id='home' className='home home--hidde' ref={home}>
       <div className='homeBackground' ref={homeBackground} />
-      <h1 className='home__title'>EDUARDO GALLARDO</h1>
+      <h1 className='home__title home__title--font' ref={home__title}>
+        EDUARDO GALLARDO
+      </h1>
       <div className='home__subtitle' ref={home__subtitle} />
     </main>
   );

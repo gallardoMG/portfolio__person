@@ -5,6 +5,7 @@ const Loading = ({
   home,
   homeBackground,
   backgroundApp__bgLines,
+  home__title,
 }) => {
   useEffect(() => {
     window.addEventListener('load', () => {
@@ -14,11 +15,12 @@ const Loading = ({
         removeClass(backgroundApp__bgLines, 'backgroundApp__bgLines--hidde');
       }, 950);
       setTimeout(() => {
+        removeClass(home__title, 'home__title--font');
         removeClass(mainWrapper, 'mainWrapper--noscroll');
         addClass(backgroundApp__bgLines, 'backgroundApp__bgLines--effect');
-      }, 2000);
+      }, 1950);
     });
-  }, [home, homeBackground, backgroundApp__bgLines, mainWrapper]);
+  }, []);
   return <></>;
 };
 

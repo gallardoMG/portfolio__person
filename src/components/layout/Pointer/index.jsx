@@ -4,7 +4,7 @@ const Puntero = ({ position }) => {
   return (
     <div
       className='wrapperPuntero'
-      style={{ transform: `translate(${position[0]}px, ${position[1]}px)` }}
+      style={{ transform: `translate(${position.x}px, ${position.y}px)` }}
     >
       <div className='puntero' />
     </div>

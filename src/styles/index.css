@@ -350,7 +350,13 @@ template {
 
 @font-face {
   font-family: binaria_display;
-  src: url("../fonts/binaria_display.woff");
+  src: url("../fonts/TriesterSansOutline.ttf");
+  font-style: "outline";
+}
+@font-face {
+  font-family: binaria_display2;
+  src: url("../fonts/TriesterSans.ttf");
+  font-style: "line";
 }
 ::-webkit-scrollbar {
   display: none;
@@ -381,7 +387,7 @@ template {
 }
 
 .contact__title {
-  color: whitesmoke;
+  color: #141414;
 }
 
 .mainWrapper {
@@ -481,7 +487,7 @@ template {
 }
 
 .backgroundApp__bgLines--effect {
-  mix-blend-mode: soft-light;
+  mix-blend-mode: overlay;
 }
 
 .backgroundApp__line--effect {
@@ -671,19 +677,23 @@ a:hover .wrapperPuntero {
 .home__title {
   text-align: center;
   font-family: binaria_display, Ubuntu, sans-serif;
-  font-size: 8vw;
+  transform: matrix(1.2, 0, 0, 1, 0, 0);
+  font-size: 10vw;
   font-weight: 100;
   letter-spacing: 0.5rem;
-  color: whitesmoke;
-  transform: matrix(1, 0, 0, 1.3, 1, 0);
+  color: white;
   margin: 0;
   padding: 0;
   mix-blend-mode: exclusion;
 }
 
+.home__title--font {
+  font-family: binaria_display2, Ubuntu, sans-serif;
+}
+
 .home__subtitle {
   font-family: "Source Code Pro", monospace;
-  font-size: 2rem;
+  font-size: 1.5rem;
   text-align: center;
   color: whitesmoke;
   letter-spacing: 0.5rem;
@@ -695,7 +705,7 @@ a:hover .wrapperPuntero {
 }
 
 #home__subtitle--random {
-  color: rgba(255, 0, 0, 0.5);
+  color: rgba(255, 0, 0, 0.4);
 }
 
 @media (max-width: 800px) {
@@ -704,12 +714,12 @@ a:hover .wrapperPuntero {
   }
 
   .home__subtitle {
-    font-size: 5vw;
+    font-size: 1rem;
     margin: 1.5rem 0;
   }
 
   .home__title {
-    font-size: 14vw;
+    font-size: 16vw;
   }
 }
 .nav {
@@ -785,7 +795,6 @@ a:hover .wrapperPuntero {
   .menuMovil__icon {
     align-self: flex-end;
     font-family: "Source Code Pro", monospace;
-    font-weight: 300;
     font-size: 1rem;
     letter-spacing: 0.1rem;
     margin: 5rem 0 0 0.9rem;
@@ -858,9 +867,9 @@ a:hover .wrapperPuntero {
   .navPhone {
     position: relative;
     font-family: binaria_display, Ubuntu, sans-serif;
-    font-weight: 600;
+    transform: matrix(1.5, 0, 0, 1, 0, 0);
     font-size: 2.2rem;
-    letter-spacing: 0.5rem;
+    letter-spacing: 0.3rem;
     list-style-type: none;
     color: #141414;
   }
@@ -932,7 +941,8 @@ a:hover .wrapperPuntero {
   display: flex;
   flex-direction: column;
   margin-bottom: 4rem;
-  font-size: 4vw;
+  font-size: 3rem;
+  overflow-x: hidden;
 }
 
 .education__section {
@@ -941,19 +951,18 @@ a:hover .wrapperPuntero {
   height: 8rem;
   display: grid;
   place-content: center;
-  overflow: hidden;
   white-space: pre;
   text-decoration: none;
   position: relative;
   color: whitesmoke;
   font-family: binaria_display, Ubuntu, sans-serif;
-  transform: matrix(1, 0, 0, 1.5, 1, 0);
+  transform: matrix(1.3, 0, 0, 1, 0, 0);
 }
 
 @media (max-width: 800px) {
   .education {
     width: 100%;
-    font-size: 6.5vw;
+    font-size: 1.5rem;
   }
 }
 .skills {
@@ -1165,7 +1174,7 @@ a:hover .wrapperPuntero {
 }
 
 .contact--open {
-  height: 1vh;
+  height: 2px;
   width: 100%;
 }
 

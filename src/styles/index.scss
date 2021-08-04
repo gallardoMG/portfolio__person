@@ -1,9 +1,6 @@
 @import './_normalize';
 @import './variables';
-@font-face {
-  font-family: binaria_display;
-  src: url('../fonts/binaria_display.woff');
-}
+@import './fonts';
 ::-webkit-scrollbar {
   display: none;
 }
@@ -29,7 +26,7 @@
   z-index: 1;
 }
 .contact__title {
-  color: $theme-color1;
+  color: $theme-color2;
 }
 .mainWrapper {
   background-color: $theme-color2;

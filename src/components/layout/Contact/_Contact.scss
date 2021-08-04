@@ -1,4 +1,3 @@
-@import '../../../styles/variables';
 .contact {
   background: $theme-color1;
   height: 0vh;
@@ -12,7 +11,7 @@
   transition: width 0.3s, top 0.3s, height 0.3s;
 }
 .contact--open {
-  height: 1vh;
+  height: 2px;
   width: 100%;
 }
 .contact--expand {

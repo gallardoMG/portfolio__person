@@ -5,14 +5,14 @@ import { ARROW_PHONE } from './constants/variables';
 
 function App() {
   const [showContact, setShowContact] = useState(false);
-  const [position, setPosition] = useState([0, 0]);
+  const [position, setPosition] = useState({ x: 0, y: 0 });
   const mainWrapper = useRef(null);
   const home = useRef(null);
   const homeBackground = useRef(null);
   const backgroundApp__bgLines = useRef(null);
+  const home__title = useRef(null);
   const currentPosition = (e) => {
-    console.log(`pointer`)
-    setPosition([e.clientX, e.clientY])
+    setPosition({ ...position, x: e.clientX, y: e.clientY })
   }
   const [sizeWindow, setSizeWindow] = useState(window.innerWidth > 800)
   useEffect(() => {
@@ -23,13 +23,13 @@ function App() {
   }, [sizeWindow])
   return (
     <div className='mainWrapper mainWrapper--noscroll' onMouseMove={e => sizeWindow ? currentPosition(e) : e.prevent} ref={mainWrapper}>
-      <Loading mainWrapper={mainWrapper} home={home} homeBackground={homeBackground} backgroundApp__bgLines={backgroundApp__bgLines} />
+      <Loading mainWrapper={mainWrapper} home={home} homeBackground={homeBackground} backgroundApp__bgLines={backgroundApp__bgLines} home__title={home__title} />
       <Pointer position={position} />
       <BackgroundApp backgroundApp__bgLines={backgroundApp__bgLines} />
       {sizeWindow && <Nav setShowContact={setShowContact} mainWrapper={mainWrapper} />}
       {!sizeWindow && <MenuMovil setShowContact={setShowContact} />}
       <Contact showContact={showContact} setShowContact={setShowContact} />
-      <Home home={home} homeBackground={homeBackground} />
+      <Home home={home} homeBackground={homeBackground} home__title={home__title} />
       <Portfolio sizeWindow={sizeWindow} />
       <Education />
       <Skills />

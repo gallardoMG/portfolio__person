@@ -35,13 +35,13 @@ const Portfolio = ({ sizeWindow }) => {
       idTimeoutScroll.current = setTimeout(() => setTiltText(0), 100);
     }
   }, []);
-  const moveImg = useCallback(e => {
+  const moveImg = e => {
     setClient([
       e.clientX - sizeContainer(containerLinks).left - 400,
       e.clientY - sizeContainer(containerLinks).top - 30,
     ]);
     removeClass(portfolio__linkImg, 'portfolio__img--hidden');
-  }, []);
+  };
 
   useEffect(() => {
     window.addEventListener('scroll', portfolioEffect);
