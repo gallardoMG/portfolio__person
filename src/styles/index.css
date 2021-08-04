@@ -796,6 +796,7 @@ a:hover .wrapperPuntero {
     align-self: flex-end;
     font-family: "Source Code Pro", monospace;
     font-size: 1rem;
+    font-weight: 600;
     letter-spacing: 0.1rem;
     margin: 5rem 0 0 0.9rem;
     color: #141414;
@@ -869,6 +870,7 @@ a:hover .wrapperPuntero {
     font-family: binaria_display, Ubuntu, sans-serif;
     transform: matrix(1.5, 0, 0, 1, 0, 0);
     font-size: 2.2rem;
+    font-weight: 600;
     letter-spacing: 0.3rem;
     list-style-type: none;
     color: #141414;
