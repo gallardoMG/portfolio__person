@@ -799,7 +799,7 @@ a:hover .wrapperPuntero {
     font-weight: 600;
     letter-spacing: 0.1rem;
     margin: 5rem 0 0 0.9rem;
-    color: #141414;
+    color: #2c2c2c;
   }
 
   .menuMovil__icon--effect {
@@ -873,7 +873,7 @@ a:hover .wrapperPuntero {
     font-weight: 600;
     letter-spacing: 0.3rem;
     list-style-type: none;
-    color: #141414;
+    color: #2c2c2c;
   }
 }
 .portfolio {
