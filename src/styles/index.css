@@ -471,7 +471,7 @@ template {
   pointer-events: none;
   transition: height 1s cubic-bezier(0.25, 0.46, 1, 0.4);
   mix-blend-mode: exclusion;
-  z-index: 3;
+  z-index: 1;
 }
 
 .backgroundApp__bgLines-1,
@@ -659,14 +659,14 @@ a:hover .wrapperPuntero {
 .homeBackground {
   position: fixed;
   bottom: 0;
-  background-color: whitesmoke;
+  background-color: whitesredmoke;
   width: 100%;
   height: 0;
   transition: height 1s cubic-bezier(0.25, 0.46, 1, 0.4), background-color 2s;
 }
 
 .homeBackground--expand {
-  background-color: #141414;
+  background-color: #0c0c0c;
   height: 100vh;
 }
 
@@ -799,7 +799,7 @@ a:hover .wrapperPuntero {
     font-weight: 600;
     letter-spacing: 0.1rem;
     margin: 5rem 0 0 0.9rem;
-    color: #2c2c2c;
+    color: #363636;
   }
 
   .menuMovil__icon--effect {
@@ -873,7 +873,7 @@ a:hover .wrapperPuntero {
     font-weight: 600;
     letter-spacing: 0.3rem;
     list-style-type: none;
-    color: #2c2c2c;
+    color: #363636;
   }
 }
 .portfolio {
