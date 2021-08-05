@@ -5,7 +5,7 @@ const BackgroundApp = ({ backgroundApp__bgLines }) => {
     <>
       <div className='backgroundApp' />
       <Logo />
-      <div
+      {/* <div
         className='backgroundApp__bgLines backgroundApp__bgLines--hidde'
         ref={backgroundApp__bgLines}
       >
@@ -15,7 +15,7 @@ const BackgroundApp = ({ backgroundApp__bgLines }) => {
         <div className='backgroundApp__bgLines-4' />
         <div className='backgroundApp__bgLines-5' />
         <div className='backgroundApp__bgLines-6' />
-      </div>
+      </div> */}
     </>
   );
 };
