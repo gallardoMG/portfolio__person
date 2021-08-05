@@ -424,7 +424,7 @@ template {
   background-image: url("../images/granulado1.png");
   animation: backgroundApp 0.2s infinite;
   pointer-events: none;
-  z-index: 3;
+  z-index: 1;
 }
 
 @keyframes backgroundApp {
@@ -678,7 +678,7 @@ a:hover .wrapperPuntero {
   text-align: center;
   font-family: binaria_display, Ubuntu, sans-serif;
   transform: matrix(1.2, 0, 0, 1, 0, 0);
-  font-size: 10vw;
+  font-size: 9vw;
   font-weight: 100;
   letter-spacing: 0.5rem;
   color: white;
