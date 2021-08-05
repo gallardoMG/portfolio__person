@@ -25,11 +25,11 @@ function App() {
     <div className='mainWrapper mainWrapper--noscroll' onMouseMove={e => sizeWindow ? currentPosition(e) : e.prevent} ref={mainWrapper}>
       <Loading mainWrapper={mainWrapper} home={home} homeBackground={homeBackground} backgroundApp__bgLines={backgroundApp__bgLines} home__title={home__title} />
       <Pointer position={position} />
-      <BackgroundApp backgroundApp__bgLines={backgroundApp__bgLines} />
+      <BackgroundApp />
       {sizeWindow && <Nav setShowContact={setShowContact} mainWrapper={mainWrapper} />}
       {!sizeWindow && <MenuMovil setShowContact={setShowContact} />}
       <Contact showContact={showContact} setShowContact={setShowContact} />
-      <Home home={home} homeBackground={homeBackground} home__title={home__title} />
+      <Home home={home} homeBackground={homeBackground} home__title={home__title} backgroundApp__bgLines={backgroundApp__bgLines} />
       <Portfolio sizeWindow={sizeWindow} />
       <Education />
       <Skills />

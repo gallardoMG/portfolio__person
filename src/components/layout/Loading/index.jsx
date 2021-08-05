@@ -17,7 +17,6 @@ const Loading = ({
       setTimeout(() => {
         removeClass(home__title, 'home__title--font');
         removeClass(mainWrapper, 'mainWrapper--noscroll');
-        addClass(backgroundApp__bgLines, 'backgroundApp__bgLines--effect');
       }, 1950);
     });
   }, []);

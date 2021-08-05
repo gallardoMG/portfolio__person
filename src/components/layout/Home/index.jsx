@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-function Home({ home, homeBackground, home__title }) {
+function Home({ home, homeBackground, home__title, backgroundApp__bgLines }) {
   const home__subtitle = useRef(null);
   useEffect(() => {
     class TextScramble {
@@ -70,7 +70,19 @@ function Home({ home, homeBackground, home__title }) {
   }, []);
   return (
     <main id='home' className='home home--hidde' ref={home}>
-      <div className='homeBackground' ref={homeBackground} />
+      <div className='homeBackground' ref={homeBackground}>
+        <div
+          className='backgroundApp__bgLines backgroundApp__bgLines--hidde'
+          ref={backgroundApp__bgLines}
+        >
+          <div className='backgroundApp__bgLines-1' />
+          <div className='backgroundApp__bgLines-2' />
+          <div className='backgroundApp__bgLines-3' />
+          <div className='backgroundApp__bgLines-4' />
+          <div className='backgroundApp__bgLines-5' />
+          <div className='backgroundApp__bgLines-6' />
+        </div>
+      </div>
       <h1 className='home__title home__title--font' ref={home__title}>
         EDUARDO GALLARDO
       </h1>
