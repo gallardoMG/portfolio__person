@@ -9,4 +9,4 @@ const BackgroundApp = () => {
   );
 };
 
-export default BackgroundApp;
+export default React.memo(BackgroundApp);

@@ -56,4 +56,4 @@ const Contact = ({ showContact, setShowContact }) => {
   );
 };
 
-export default Contact;
+export default React.memo(Contact);

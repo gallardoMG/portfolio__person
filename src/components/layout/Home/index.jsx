@@ -9,7 +9,7 @@ function Home({ home, homeBackground, home__title, backgroundApp__bgLines }) {
         this.update = this.update.bind(this);
       }
       setText(newText) {
-        const oldText = this.el.innerText;
+        const oldText = this.el.current.innerText;
         const length = Math.max(oldText.length, newText.length);
         const promise = new Promise(resolve => (this.resolve = resolve));
         this.queue = [];
@@ -31,7 +31,7 @@ function Home({ home, homeBackground, home__title, backgroundApp__bgLines }) {
       update() {
         let output = '';
         let complete = 0;
-        for (let i = 0, n = this.queue.length; i < n; i++) {
+        for (let i = 0; i < this.queue.length; i++) {
           let { from, to, start, end, char } = this.queue[i];
           if (this.frame >= end) {
             complete++;
@@ -41,12 +41,12 @@ function Home({ home, homeBackground, home__title, backgroundApp__bgLines }) {
               char = this.randomChar();
               this.queue[i].char = char;
             }
-            output += `<span id="home__subtitle--random">${char}</span>`;
+            output += char;
           } else {
             output += from;
           }
-        }
-        this.el.innerHTML = output;
+        } //
+        this.el.current.innerHTML = output;
         if (complete === this.queue.length) {
           this.resolve();
         } else {
@@ -56,12 +56,12 @@ function Home({ home, homeBackground, home__title, backgroundApp__bgLines }) {
       }
     }
     const phrases = ['front-end', 'development'];
-    const el = home__subtitle.current;
+    const el = home__subtitle;
     const fx = new TextScramble(el);
     let counter = 0;
     const next = () => {
       fx.setText(phrases[counter]).then(() => {
-        setTimeout(next, 1400);
+        setTimeout(next, 5000);
       });
       counter = (counter + 1) % phrases.length;
     };
@@ -90,4 +90,4 @@ function Home({ home, homeBackground, home__title, backgroundApp__bgLines }) {
     </main>
   );
 }
-export default Home;
+export default React.memo(Home);

@@ -13,12 +13,6 @@
   border-radius: 50%;
   transition: transform 0.3s;
 }
-.puntero--grow {
-  transform: scale(3);
-}
-a:hover .wrapperPuntero {
-  transform: scale(5);
-}
 .puntero::before {
   content: '';
   position: absolute;
@@ -37,9 +31,4 @@ a:hover .wrapperPuntero {
   filter: blur(50px);
   background-color: red;
   mix-blend-mode: screen;
-}
-@media (max-width: 800px) {
-  .puntero {
-    display: none;
-  }
 }

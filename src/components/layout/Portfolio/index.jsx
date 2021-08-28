@@ -59,7 +59,7 @@ const Portfolio = ({ sizeWindow }) => {
       <a.div
         ref={containerLinks}
         onMouseMove={e => (sizeWindow ? moveImg(e) : e.preventDefault)}
-        onMouseOut={e =>
+        onMouseLeave={e =>
           sizeWindow
             ? addClass(portfolio__linkImg, 'portfolio__img--hidden')
             : e.preventDefault
@@ -71,7 +71,7 @@ const Portfolio = ({ sizeWindow }) => {
           href='https://timer-manager.herokuapp.com/'
           target='_blank'
           rel='noreferrer noopener'
-          onMouseOver={() => setImg(time)}
+          onMouseEnter={() => setImg(time)}
         >
           TIME MANAGAER
         </a>
@@ -80,7 +80,7 @@ const Portfolio = ({ sizeWindow }) => {
           href='https://codepen.io/eduardo-m-gallardo/full/dyvrGaJ'
           target='_blank'
           rel='noreferrer noopener'
-          onMouseOver={() => setImg(calculator)}
+          onMouseEnter={() => setImg(calculator)}
         >
           CALCULATOR
         </a>
@@ -89,7 +89,7 @@ const Portfolio = ({ sizeWindow }) => {
           href='https://timer-manager.herokuapp.com/'
           target='_blank'
           rel='noreferrer noopener'
-          onMouseOver={() => setImg(drumMachine)}
+          onMouseEnter={() => setImg(drumMachine)}
         >
           DRUM MACHINE
         </a>
@@ -98,7 +98,7 @@ const Portfolio = ({ sizeWindow }) => {
           href='https://timer-manager.herokuapp.com/'
           target='_blank'
           rel='noreferrer noopener'
-          onMouseOver={() => setImg(markDown)}
+          onMouseEnter={() => setImg(markDown)}
         >
           MARK DOWN
         </a>
@@ -107,7 +107,7 @@ const Portfolio = ({ sizeWindow }) => {
           href='https://timer-manager.herokuapp.com/'
           target='_blank'
           rel='noreferrer noopener'
-          onMouseOver={() => setImg(randomQuote)}
+          onMouseEnter={() => setImg(randomQuote)}
         >
           RANDOM QUOTE
         </a>
@@ -116,4 +116,4 @@ const Portfolio = ({ sizeWindow }) => {
   );
 };
 
-export default Portfolio;
+export default React.memo(Portfolio);

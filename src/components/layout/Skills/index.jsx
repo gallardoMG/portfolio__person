@@ -40,7 +40,7 @@ const Skills = () => {
       removeClass(skills__backgroundSlide3, 'skills__background--effect');
       removeClass(skills__wrapperIcons, 'skills__wrapperIcons--effect');
     }
-  }, [setStartPorcent_1, setPorcent_1]);
+  }, []);
 
   useEffect(() => {
     window.addEventListener('scroll', showSection);
@@ -49,7 +49,7 @@ const Skills = () => {
   useEffect(() => {
     if (startPorcent_1) setPorcent_1(100);
     if (startPorcent_2) setPorcent_2(100);
-  }, [setPorcent_1, setPorcent_2, startPorcent_1, startPorcent_2]);
+  }, [startPorcent_1, startPorcent_2]);
 
   return (
     <section id='skills' className='skills'>
@@ -121,4 +121,4 @@ const Skills = () => {
   );
 };
 
-export default Skills;
+export default React.memo(Skills);

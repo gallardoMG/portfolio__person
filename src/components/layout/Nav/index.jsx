@@ -34,4 +34,4 @@ const Nav = ({ setShowContact, mainWrapper }) => {
   );
 };
 
-export default Nav;
+export default React.memo(Nav);

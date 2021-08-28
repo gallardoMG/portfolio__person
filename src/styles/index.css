@@ -496,14 +496,6 @@ template {
   transition: transform 0.3s;
 }
 
-.puntero--grow {
-  transform: scale(3);
-}
-
-a:hover .wrapperPuntero {
-  transform: scale(5);
-}
-
 .puntero::before {
   content: "";
   position: absolute;
@@ -525,11 +517,6 @@ a:hover .wrapperPuntero {
   mix-blend-mode: screen;
 }
 
-@media (max-width: 800px) {
-  .puntero {
-    display: none;
-  }
-}
 .arrowDesktop__svg3,
 .arrowContact:hover .arrowContact__svg1,
 .arrowContact:hover .arrowContact__svg3,

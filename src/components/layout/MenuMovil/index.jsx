@@ -12,7 +12,7 @@ const MenuMovil = ({ setShowContact }) => {
     toggleClass(menuMovil, 'menuMovil--expand');
     toggleClass(menuMovil__icon, 'menuMovil__icon--effect');
     toggleClass(munuMovil__liks, 'munuMovil__liks--show');
-    setClose(!close);
+    setClose(prevState => !prevState);
   };
   return (
     <section className='menuMovil' ref={menuMovil}>
@@ -34,4 +34,4 @@ const MenuMovil = ({ setShowContact }) => {
   );
 };
 
-export default MenuMovil;
+export default React.memo(MenuMovil);
