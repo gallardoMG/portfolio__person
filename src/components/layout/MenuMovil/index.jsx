@@ -34,4 +34,4 @@ const MenuMovil = ({ setShowContact }) => {
   );
 };
 
-export default React.memo(MenuMovil);
+export default MenuMovil;

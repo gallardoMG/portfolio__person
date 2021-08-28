@@ -19,7 +19,7 @@ const Education = () => {
           (sizeContainer(education).width / (window.innerWidth / 2.5))
       );
     }
-  }, [axisX]);
+  }, []);
   useEffect(() => {
     window.addEventListener('scroll', slideText);
     return () => window.removeEventListener('scroll', slideText);
@@ -37,7 +37,6 @@ const Education = () => {
           {certificate1.map(el => el + '       ')}
         </a.p>
       </a>
-
       <a
         className='education__section'
         href='https://freecodecamp.org/espanol/certification/eduardo_gallardo/javascript-algorithms-and-data-structures'
@@ -48,7 +47,6 @@ const Education = () => {
           {certificate2.map(el => el + '       ')}
         </a.p>
       </a>
-
       <a
         className='education__section'
         href='https://freecodecamp.org/certification/eduardo_gallardo/responsive-web-design'
@@ -59,7 +57,6 @@ const Education = () => {
           {certificate3.map(el => el + '       ')}
         </a.p>
       </a>
-
       <a
         className='education__section'
         href='https://fi.uy/fxms'
@@ -70,6 +67,7 @@ const Education = () => {
           {certificate4.map(el => el + '       ')}
         </a.p>
       </a>
+      {console.log('o')}
     </section>
   );
 };
