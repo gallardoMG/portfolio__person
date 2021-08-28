@@ -116,4 +116,4 @@ const Portfolio = ({ sizeWindow }) => {
   );
 };
 
-export default Portfolio;
+export default React.memo(Portfolio);
