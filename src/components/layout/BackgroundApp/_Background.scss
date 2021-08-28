@@ -5,46 +5,46 @@
   transform: translate(-50%, -50%);
   width: 150%;
   height: 150%;
-  background-image: url('../images/granulado1.png');
-  animation: backgroundApp 0.2s infinite;
+  // background-image: url('../images/granulado1.png');
+  // animation: backgroundApp 0.2s infinite;
   pointer-events: none;
   z-index: 3;
 }
-@keyframes backgroundApp {
-  0% {
-    transform: translate(-50%, -50%);
-  }
-  10% {
-    transform: translate(-55%, -55%);
-  }
-  20% {
-    transform: translate(-60%, -55%);
-  }
-  30% {
-    transform: translate(-50%, -60%);
-  }
-  40% {
-    transform: translate(-55%, -65%);
-  }
-  50% {
-    transform: translate(-50%, -55%);
-  }
-  60% {
-    transform: translate(-65%, -50);
-  }
-  70% {
-    transform: translate(-50, -60%);
-  }
-  80% {
-    transform: translate(-65%, -50);
-  }
-  90% {
-    transform: translate(-60%, -55%);
-  }
-  100% {
-    transform: translate(-55%, -50);
-  }
-}
+// @keyframes backgroundApp {
+//   0% {
+//     transform: translate(-50%, -50%);
+//   }
+//   10% {
+//     transform: translate(-55%, -55%);
+//   }
+//   20% {
+//     transform: translate(-60%, -55%);
+//   }
+//   30% {
+//     transform: translate(-50%, -60%);
+//   }
+//   40% {
+//     transform: translate(-55%, -65%);
+//   }
+//   50% {
+//     transform: translate(-50%, -55%);
+//   }
+//   60% {
+//     transform: translate(-65%, -50);
+//   }
+//   70% {
+//     transform: translate(-50, -60%);
+//   }
+//   80% {
+//     transform: translate(-65%, -50);
+//   }
+//   90% {
+//     transform: translate(-60%, -55%);
+//   }
+//   100% {
+//     transform: translate(-55%, -50);
+//   }
+// }
 
 .logo {
   width: 2.8rem;

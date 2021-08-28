@@ -69,6 +69,7 @@ const Education = () => {
           {certificate4.map(el => el + '       ')}
         </a.p>
       </a>
+      {console.log('repinted')}
     </section>
   );
 };
