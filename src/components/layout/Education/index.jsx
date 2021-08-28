@@ -13,12 +13,13 @@ const Education = () => {
       sizeContainer(education).bottom >= 0
     ) {
       setAxisX(
-        (100 / sizeContainer(education).height) *
+        () =>
+          (100 / sizeContainer(education).height) *
           sizeContainer(education).top *
-          (sizeContainer(education).right / (window.innerWidth / 5))
+          (sizeContainer(education).width / (window.innerWidth / 2.5))
       );
     }
-  }, []);
+  }, [axisX]);
   useEffect(() => {
     window.addEventListener('scroll', slideText);
     return () => window.removeEventListener('scroll', slideText);
@@ -69,7 +70,6 @@ const Education = () => {
           {certificate4.map(el => el + '       ')}
         </a.p>
       </a>
-      {console.log('repinted')}
     </section>
   );
 };

@@ -6,8 +6,6 @@ import { redux, jquery, illustrator, photoshop } from '../../../images/index';
 const Skills = () => {
   const [porcent_1, setPorcent_1] = useState(0);
   const [porcent_2, setPorcent_2] = useState(0);
-  const [startPorcent_1, setStartPorcent_1] = useState(false);
-  const [startPorcent_2, setStartPorcent_2] = useState(false);
   const sizeSection_1 = useRef(null);
   const sizeSection_2 = useRef(null);
   const sizeSection_3 = useRef(null);
@@ -19,18 +17,16 @@ const Skills = () => {
   const showSection = useCallback(() => {
     if (sizeContainer(sizeSection_1).top <= window.innerHeight) {
       addClass(skills__backgroundSlide1, 'skills__background--effect');
-      setStartPorcent_1(true);
+      setPorcent_1(100);
     } else {
       removeClass(skills__backgroundSlide1, 'skills__background--effect');
-      setStartPorcent_1(false);
       setPorcent_1(0);
     }
     if (sizeContainer(sizeSection_2).top <= window.innerHeight) {
       addClass(skills__backgroundSlide2, 'skills__background--effect');
-      setStartPorcent_2(true);
+      setPorcent_2(100);
     } else {
       removeClass(skills__backgroundSlide2, 'skills__background--effect');
-      setStartPorcent_2(false);
       setPorcent_2(0);
     }
     if (sizeContainer(sizeSection_3).top <= window.innerHeight) {
@@ -46,10 +42,6 @@ const Skills = () => {
     window.addEventListener('scroll', showSection);
     return () => window.removeEventListener('scroll', showSection);
   }, [showSection]);
-  useEffect(() => {
-    if (startPorcent_1) setPorcent_1(100);
-    if (startPorcent_2) setPorcent_2(100);
-  }, [startPorcent_1, startPorcent_2]);
 
   return (
     <section id='skills' className='skills'>
